@@ -1,0 +1,70 @@
+body {
+  font-size: 1.125rem;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #1E242a;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#box1 {
+  width: 900px;
+  height: 625px;
+  position: relative;
+  background-image: url("../img/city.jpg");
+  bottom: -100%;
+  left: 30%;
+  animation: anim 2s forwards;
+  transition: 1s;
+}
+
+@keyframes anim {
+  from {
+    bottom: -100%;
+    top: 100%;
+  }
+
+  to {
+    bottom: 0%;
+    top: 15%;
+  }
+}
+
+#box2 {
+  width: 1500px;
+  height: auto;
+  color: #fff;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+#text {
+  position: relative;
+  left: -100%;
+  animation: anim3 2s forwards 3s;
+  width: 80%;
+}
+
+@keyframes anim3 {
+  from {
+    left: -150%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+#box1:hover #box2 {
+  font-size: 5em;
+}
